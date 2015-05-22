@@ -3,18 +3,18 @@ public class TracingA
 	{
 	public static void main(String[] args)
 		{
-		System.out.println(trace(5));
+		System.out.println(trace(4, 4));
 		}
 	
-	public static int trace(int n)
+	public static int trace(int x, int y)
 		{
-		if(n <= 1)
+		if(x == 0)
 			{
-			return 1;
+			return x;
 			}
 		else
 			{
-			return trace(n - 2) + n;
+			return trace(y - 1, x) + x;
 			}
 		}
 	}
